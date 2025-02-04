@@ -5,6 +5,7 @@ body {
     @apply w-screen h-screen flex flex-col items-center max-h-screen;
 }
 
+
 @theme {
     --color-orange-peel-50: #fff8eb;
     --color-orange-peel-100: #feeac7;
@@ -32,54 +33,73 @@ body {
 
 }
 
-@layer theme {
-    :root {
-        --type-normal: #A8A77A;
-        --type-fire: #EE8130;
-        --type-water: #6390F0;
-        --type-electric: #F7D02C;
-        --type-grass: #7AC74C;
-        --type-ice: #96D9D6;
-        --type-fighting: #C22E28;
-        --type-poison: #A33EA1;
-        --type-ground: #E2BF65;
-        --type-flying: #A98FF3;
-        --type-psychic: #F95587;
-        --type-bug: #A6B91A;
-        --type-rock: #B6A136;
-        --type-ghost: #735797;
-        --type-dragon: #6F35FC;
-        --type-dark: #705746;
-        --type-steel: #B7B7CE;
-        --type-fairy: #D685AD;
-    
-        --red: #EF4444;
-        --blue: #3B82F6;
-        --yellow: #F59E0B;
-        --green: #10B981;
-        --purple: #8B5CF6;
-        --pink: #EC4899;
-        --brown: #A16207;
-        --black: #000000;
-        --white: #FFFFFF;
-        --gray: #6B7280;
-        --orange: #F97316;
-        --cyan: #06B6D4;
-        --magenta: #D946EF;
-        --lime: #84CC16;
-        --indigo: #6366F1;
-        --violet: #A78BFA;
-        --gold: #FBBF24;
-        --silver: #9CA3AF;
-        --bronze: #B45309;
-    }
+:root {
+    --type-normal: #A8A77A;
+    --type-fire: #EE8130;
+    --type-water: #6390F0;
+    --type-electric: #F7D02C;
+    --type-grass: #7AC74C;
+    --type-ice: #96D9D6;
+    --type-fighting: #C22E28;
+    --type-poison: #A33EA1;
+    --type-ground: #E2BF65;
+    --type-flying: #A98FF3;
+    --type-psychic: #F95587;
+    --type-bug: #A6B91A;
+    --type-rock: #B6A136;
+    --type-ghost: #735797;
+    --type-dragon: #6F35FC;
+    --type-dark: #705746;
+    --type-steel: #B7B7CE;
+    --type-fairy: #D685AD;
+
+    --red: #EF4444;
+    --blue: #3B82F6;
+    --yellow: #F59E0B;
+    --green: #10B981;
+    --purple: #8B5CF6;
+    --pink: #EC4899;
+    --brown: #A16207;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #6B7280;
+    --orange: #F97316;
+    --cyan: #06B6D4;
+    --magenta: #D946EF;
+    --lime: #84CC16;
+    --indigo: #6366F1;
+    --violet: #A78BFA;
+    --gold: #FBBF24;
+    --silver: #9CA3AF;
+    --bronze: #B45309;
 }
 
-@layer components {
-    .scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-blue-ribbon-400) var(--color-blue-ribbon-200);
-    }
+@utility scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-orange-peel-500) var(--color-orange-peel-50);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+::-webkit-scrollbar-track {
+    background: #222; /* Fundo escuro */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff1a1a, #cc0000); /* Vermelho Pokédex */
+    border-radius: 10px;
+    border: 2px solid #fff; /* Borda branca para destacar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff3333, #e60000); /* Efeito ao passar o mouse */
+}
+
+/* Para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #cc0000 #222;
+}

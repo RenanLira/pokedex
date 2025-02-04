@@ -11,7 +11,7 @@ interface PokemonPageProps {
 export function PokemonPage({ data }: PokemonPageProps) {
 
     return (
-        <div className="h-full flex flex-col items-center flex-1 min-w-full absolute z-50 bg-background lg:relative lg:min-w-[420px] rounded-md overflow-hidden">
+        <div className="h-full flex flex-col items-center flex-1 min-w-full absolute z-50 bg-background lg:relative lg:min-w-[420px] rounded-md overflow-hidden bg-red-50">
             <div className="relative flex justify-center items-center w-full min-h-fit overflow-hidden">
                 <PokebolaSvgComponent className="absolute w-[76%] left-1/3 rotate-45 -z-10"
                     style={{
@@ -43,7 +43,10 @@ export function PokemonPage({ data }: PokemonPageProps) {
                     <h2 className="text-2xl font-bold">Abilities</h2>
                     <div className="flex space-x-2">
                         {data.abilities.map((ability: any) => (
-                            <span key={ability.ability.name} className="text-lg font-bold">{ability.ability.name}</span>
+                            <span key={ability.ability.name}
+                                className="text-xs font-bold bg-yellow-500 rounded-lg p-4">
+                                {ability.ability.name}
+                            </span>
                         ))}
                     </div>
                 </div>

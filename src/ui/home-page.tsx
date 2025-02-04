@@ -57,7 +57,7 @@ export function HomePage() {
 
 
     return (
-        <div className="max-w-screen-xl w-full bg-orange-50 rounded-md shadow-xl p-4 scrollbar overflow-hidden"
+        <div className="max-w-screen-xl w-full p-4 scrollbar overflow-hidden"
             ref={ref}
             style={{
                 overflowY: "scroll",
