@@ -20,7 +20,7 @@ export function PokemonPage({ data }: PokemonPageProps) {
                         opacity: 0.3
                     }}
                 />
-                <Image src={`https://projectpokemon.org/images/shiny-sprite/${data.name}.gif`} alt={data.name} className="h-60 w-auto z-10 relative" />
+                <Image src={`https://projectpokemon.org/images/shiny-sprite/${data.name}.gif`} width={10} height={10} alt={data.name} unoptimized className="h-60 w-auto z-10 relative" />
             </div>
             <div className="flex flex-col items-center rounded-lg h-full w-full -mt-5 pt-20 bg-background gap-5"
             >

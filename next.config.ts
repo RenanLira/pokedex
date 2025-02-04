@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         hostname: 'raw.githubusercontent.com'
+      },
+      {
+        hostname: 'projectpokemon.org'
       }
     ]
   }
