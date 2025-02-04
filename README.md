@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ![Pokedex Logo](https://static.wikia.nocookie.net/tkoc/images/4/4b/Pok%C3%A9dex_logo.png/revision/latest?cb=20200623145208&path-prefix=pt-br)
 
-## Getting Started
+<p align="center">
+  <a href="https://github.com/renanlira/pokedex/stargazers"><img src="https://img.shields.io/github/stars/renanlira/pokedex?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/renanlira/pokedex/issues"><img src="https://img.shields.io/github/issues/renanlira/pokedex" alt="GitHub issues"></a>
+  <a href="https://github.com/renanlira/pokedex/network/members"><img src="https://img.shields.io/github/forks/renanlira/pokedex" alt="GitHub forks"></a>
+</p>
 
-First, run the development server:
+## 👨‍💻 Desenvolvido por
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Renan Lira**
+  [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/renanlira)  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renanlira/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Sobre o Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto é uma Pokédex, uma enciclopédia digital de Pokémon, onde você pode encontrar informações detalhadas sobre cada Pokémon.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Funcionalidades
 
-## Learn More
+- ✅ Listagem de todos os Pokémon
+- 🔍 Detalhes de cada Pokémon
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🚀 Next Js
+- 🎨 Framer Motion
+- ⚡ use Query
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Como Executar
 
-## Deploy on Vercel
+1. Clone o repositório:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/renanlira/pokedex.git
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd pokedex
+    ```
+
+3. Execute o comando `npm run dev`
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+<p align="center">
+  <a href="https://github.com/renanlira/pokedex"><img src="https://img.shields.io/badge/Ver%20no%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+</p>
