@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <ReactQueryProvider>
           <HeaderComponent />
-          <div className="w-full flex justify-center items-center md:gap-9 h-full overflow-hidden py-9 px-7 relative">
+          <div className="w-full flex justify-center items-center md:gap-9 h-full overflow-hidden py-9 px-7 relative bg-orange-peel-100">
             {children}
             {modal}
           </div>

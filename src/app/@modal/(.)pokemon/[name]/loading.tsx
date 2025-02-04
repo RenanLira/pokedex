@@ -6,10 +6,9 @@ export default function Loading() {
             className="flex justify-center items-center min-w-full absolute z-50 bg-background lg:relative lg:min-w-[420px] h-full p-10"
         >
 
-            <PokebolaSvgComponent className="w-full animate-spin"
+            <PokebolaSvgComponent className="w-full animate-spin fill-blue-ribbon-500"
                 style={{
-                    fill: `var(--type-normal)`,
-                    opacity: 0.3
+                    opacity: 0.8
                 }}
             />
 

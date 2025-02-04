@@ -57,7 +57,7 @@ export function HomePage() {
 
 
     return (
-        <div className="max-w-screen-xl w-full"
+        <div className="max-w-screen-xl w-full bg-orange-50 rounded-md shadow-xl p-4 scrollbar overflow-hidden"
             ref={ref}
             style={{
                 overflowY: "scroll",
@@ -68,7 +68,7 @@ export function HomePage() {
             >
                 {data?.pages.map((page: any) => (
                     page.results.map((pokemon: any, index: number) => (
-                        <Link href={`/pokemon/${pokemon.name}`}  key={index}>
+                        <Link href={`/pokemon/${pokemon.name}`} key={index}>
                             <PokemonCardMemo id={pokemon.id} name={pokemon.name} key={index} />
                         </Link>
                     ))

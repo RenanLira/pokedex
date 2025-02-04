@@ -39,7 +39,7 @@ export const PokemonCardComponent = ({ name }: PokemonCardProps) => {
                     transition={{ duration: 0.5 }}
                     whileInView={{ translateY: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    className={`flex p-4 h-60 rounded-md shadow-md w-full justify-between bg-background pokemon-card`}>
+                    className={`flex p-4 h-60 rounded-md shadow-md w-full justify-between bg-white pokemon-card`}>
                     <div className="relative flex justify-center items-center flex-1">
                         <Image
                             src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pokemon.data?.id + ".png"}
