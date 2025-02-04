@@ -1,12 +1,11 @@
 "use client";
 
-import { PokemonCardComponent, PokemonCardMemo } from "@/components/pokemon-card";
+import { PokemonCardMemo } from "@/components/pokemon-card";
 import { GetPokemonsService } from "@/services/get-pokemons";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useVirtualizer } from "@tanstack/react-virtual";
-import { useScroll } from "motion/react";
+
 import Link from "next/link";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, } from "react";
 
 
 
@@ -18,7 +17,6 @@ export function HomePage() {
         isFetchingNextPage,
         hasNextPage,
         fetchNextPage,
-        isFetched
     } = useInfiniteQuery({
         queryKey: ["pokemons"],
         queryFn: async ({ pageParam }) => {
@@ -38,21 +36,25 @@ export function HomePage() {
 
 
     useEffect(() => {
+        const currentRef = ref.current;
 
-        if (ref.current) {
-            ref.current.addEventListener("scroll", () => {
-                const scrollStep = ref.current?.scrollTop! + ref.current?.clientHeight! >= ref.current?.scrollHeight! * 0.8;
+        if (currentRef) {
+            const handleScroll = () => {
+                const scrollStep =
+                    (currentRef.scrollTop ?? 0) + (currentRef.clientHeight ?? 0) >= (currentRef.scrollHeight ?? 0) * 0.8;
 
                 if (scrollStep && !isFetchingNextPage && hasNextPage) {
                     fetchNextPage();
                 }
-            })
+            };
+
+            currentRef.addEventListener("scroll", handleScroll);
 
             return () => {
-                ref.current?.removeEventListener("scroll", () => { })
-            }
+                currentRef.removeEventListener("scroll", handleScroll);
+            };
         }
-    }, [ref, isFetchingNextPage, hasNextPage])
+    }, [ref, isFetchingNextPage, hasNextPage, fetchNextPage])
 
 
 

@@ -2,7 +2,6 @@
 
 import { GetPokemonService } from "@/services/get-pokemon";
 import { PokemonPage } from "@/ui/pokemon-page";
-import { Suspense, use } from "react";
 
 interface PageProps {
     params: Promise<{

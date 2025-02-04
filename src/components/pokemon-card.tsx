@@ -1,7 +1,7 @@
 import { GetPokemonService } from "@/services/get-pokemon"
 import { GetPokemonSpeciesService } from "@/services/get-pokemon-species"
 import { useQueries } from "@tanstack/react-query"
-import { motion, useInView } from "motion/react"
+import { motion } from "motion/react"
 import Image from "next/image"
 import { memo } from "react"
 import { SpanTypeComponent } from "./span-type"

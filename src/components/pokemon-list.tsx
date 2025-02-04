@@ -1,7 +1,5 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query"
 import { PokemonCardComponent } from "./pokemon-card"
-import { GetPokemonService } from "@/services/get-pokemon"
-import { GetPokemonsService } from "@/services/get-pokemons"
+
 
 
 interface PokemonListProps {
