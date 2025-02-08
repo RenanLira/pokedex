@@ -39,14 +39,14 @@ export const PokemonCardComponent = ({ name }: PokemonCardProps) => {
                     transition={{ duration: 0.5 }}
                     whileInView={{ translateY: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    className={`flex p-4 h-60 rounded-md shadow-md w-full justify-between bg-white pokemon-card hover:scale-[101%] transition-all duration-200`}>
+                    className={`flex p-6 rounded-md shadow-md w-full gap-2 bg-white pokemon-card hover:scale-[101%] transition-all duration-200`}>
                     <div className="relative flex justify-center items-center flex-1">
                         <Image
                             src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pokemon.data?.id + ".png"}
                             width={160}
                             height={122}
                             priority
-                            className="z-10 w-auto h-auto"
+                            className="z-10 h-auto w-24"
                             alt={pokemon.data?.name}
                         />
                         <span className={`w-20 h-20 md:w-32 md:h-32 flex absolute rounded-full`} style={{
@@ -55,10 +55,10 @@ export const PokemonCardComponent = ({ name }: PokemonCardProps) => {
                         }}>
                         </span>
                     </div>
-                    <div className="flex-[2] justify-between flex flex-col">
+                    <div className="flex-[2] gap-4 flex flex-col">
                         <div className="flex justify-between">
                             <div className="flex flex-col gap-2">
-                                <h3 className="uppercase font-extrabold text-xl">
+                                <h3 className="uppercase font-extrabold md:text-xl">
                                     {pokemon.data?.name}
                                 </h3>
                                 <div className="flex gap-2">
@@ -74,7 +74,7 @@ export const PokemonCardComponent = ({ name }: PokemonCardProps) => {
                             </div>
                         </div>
                         <div>
-                            <p className="text-xs text-gray-600">
+                            <p className="text-xs text-gray-600 line-clamp-2">
                                 {species.data?.flavor_text_entries.find((entry: any) => entry.language.name === 'en').flavor_text}
                             </p>
                         </div>

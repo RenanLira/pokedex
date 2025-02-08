@@ -3,7 +3,7 @@ import { ButtonComponent } from "./button"
 
 export const HeaderComponent = () => {
     return (
-        <header className="bg-red-500 w-full h-24 px-6 flex items-center justify-between text-white shadow-lg border-b-4 border-black">
+        <header className="bg-red-500 w-full min-h-24 px-6 py-6 gap-3 flex items-center justify-between text-white shadow-lg border-b-4 border-black flex-col md:flex-row">
             <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white border-4 border-black rounded-full flex items-center justify-center">
                     <div className="w-4 h-4 bg-blue-500 rounded-full"></div>

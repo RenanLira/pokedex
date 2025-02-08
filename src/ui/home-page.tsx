@@ -59,14 +59,14 @@ export function HomePage() {
 
 
     return (
-        <div className="max-w-screen-xl w-full p-4 scrollbar overflow-hidden"
+        <div className="max-w-screen-xl w-full scrollbar overflow-hidden"
             ref={ref}
             style={{
                 overflowY: "scroll",
                 height: "100%"
             }}
         >
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(420px,1fr))] gap-4"
+            <div className="grid  md:grid-cols-[repeat(auto-fit,minmax(420px,1fr))] gap-4"
             >
                 {data?.pages.map((page: any) => (
                     page.results.map((pokemon: any, index: number) => (
