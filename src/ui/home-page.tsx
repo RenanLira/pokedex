@@ -1,11 +1,12 @@
 "use client";
 
+import { InfinityScrollerComponent } from "@/components/infinity-scroller";
 import { PokemonCardMemo } from "@/components/pokemon-card";
 import { GetPokemonsService } from "@/services/get-pokemons";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 import Link from "next/link";
-import { useEffect, useRef, } from "react";
+import { useRef, } from "react";
 
 
 
@@ -14,9 +15,9 @@ export function HomePage() {
 
     const {
         data,
-        isFetchingNextPage,
         hasNextPage,
         fetchNextPage,
+        isFetchingNextPage
     } = useInfiniteQuery({
         queryKey: ["pokemons"],
         queryFn: async ({ pageParam }) => {
@@ -34,48 +35,23 @@ export function HomePage() {
 
 
 
-
-    useEffect(() => {
-        const currentRef = ref.current;
-
-        if (currentRef) {
-            const handleScroll = () => {
-                const scrollStep =
-                    (currentRef.scrollTop ?? 0) + (currentRef.clientHeight ?? 0) >= (currentRef.scrollHeight ?? 0) * 0.8;
-
-                if (scrollStep && !isFetchingNextPage && hasNextPage) {
-                    fetchNextPage();
-                }
-            };
-
-            currentRef.addEventListener("scroll", handleScroll);
-
-            return () => {
-                currentRef.removeEventListener("scroll", handleScroll);
-            };
-        }
-    }, [ref, isFetchingNextPage, hasNextPage, fetchNextPage])
-
-
-
     return (
-        <div className="max-w-screen-xl w-full scrollbar overflow-hidden"
+        <div className="max-w-screen-xl w-full h-full overflow-y-auto overflow-x-hidden"
             ref={ref}
-            style={{
-                overflowY: "scroll",
-                height: "100%"
-            }}
         >
-            <div className="grid  md:grid-cols-[repeat(auto-fit,minmax(420px,1fr))] gap-4"
-            >
-                {data?.pages.map((page: any) => (
-                    page.results.map((pokemon: any, index: number) => (
-                        <Link href={`/pokemon/${pokemon.name}`} key={index}>
-                            <PokemonCardMemo id={pokemon.id} name={pokemon.name} key={index} />
-                        </Link>
-                    ))
-                ))}
-            </div>
+
+            <InfinityScrollerComponent
+                data={data?.pages.flatMap((page: any) => page.results) || []}
+                hasNextPage={hasNextPage}
+                fetchNextPage={fetchNextPage}
+                containerRef={ref}
+                isFetchingNextPage={isFetchingNextPage}
+                renderCell={(pokemon: any) => (
+                    <Link href={`/pokemon/${pokemon.name}`}>
+                        <PokemonCardMemo id={pokemon.id} name={pokemon.name} />
+                    </Link>
+                )}
+            />
 
         </div>
     )
