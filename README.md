@@ -16,6 +16,8 @@
 
 Este projeto é uma Pokédex, uma enciclopédia digital de Pokémon, onde você pode encontrar informações detalhadas sobre cada Pokémon.
 
+## Acesse o site ![AQUI!](https://renanlira-pokedex.vercel.app/)
+
 ## ⚙️ Funcionalidades
 
 - ✅ Listagem de todos os Pokémon
